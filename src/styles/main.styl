@@ -1,22 +1,141 @@
-$primary-color = #A3A4FF;
-$seconday-color = #51527F;
+$yellow = #F7D31E
+$black = #2D334A
+$white = #EBEBEB
 
-border-radius(n)
-  border-radius n
-  border 1px solid white
+$bold = 800
+$regular = 400
 
-sum(a, b)
-  a + b
+$font = 'Montserrat', sans-serif;
+$space = 16px
 
-body
-  background-color $primary-color
+mixin-titles($size)
+  font-family $font
+  font-weight $bold
+  font-size $size
+  line-height 1em
+
+h1
+  mixin-titles(65px)
+
+h2
+  mixin-titles(44px)
+
+h3
+  mixin-titles(34px)
+
+p
+  font-family $font
+  font-size $space
+  font-weight $regular
+
+a
+  color $yellow
+  font-size $space
+  transition all 0.5s
+  cursor pointer
+  &:hover
+    color $white
+
+*
   margin 0
   padding 0
-  font-size 16px
 
-div
-  background-color $seconday-color
-  color white
-  padding 1em
-  margin sum(10px, 5)
-  border-radius(15px)
+body 
+  background-color $black
+  padding-bottom $space * 5
+
+.hero
+  display grid
+  grid-template-columns: 25% 1fr 25%
+  min-height 70%vh
+  padding-bottom: $space * 5
+  background $yellow
+  &__info
+    grid-column-start 2
+    display flex
+    flex-direction column
+    justify-content center
+    align-items center
+    h1, p
+      text-align center
+      color $black
+      text-align center
+      margin-bottom $space
+    .logo
+      width 120px
+      margin-bottom -($space / 2)
+
+button 
+  margin-top $space
+  padding ($space) ($space * 3)
+  border-radius ($space / 2)
+  font-family $font
+  font-weight $bold
+  font-size $space
+  background-color $black
+  color $yellow
+  border none 
+  cursor pointer
+  transition: all 0.5s
+  &:hover
+    background-color $white
+    color $black 
+    transform: scale(1.1)
+
+svg 
+  position absolute
+
+.cover
+  position relative 
+  width: 60%
+  margin-top -($space * 8)
+  margin-left 20%
+  margin-right 20%
+  border-radius $space
+
+.body
+  display grid
+  grid-template-columns 15% 1fr 15%
+  padding ($space * 4) 0
+  &__wrapper
+    display flex
+    flex-direction column
+    grid-column-start 2
+  &__theme
+    display flex
+    flex-direction row
+    align-items center
+    justify-content center
+    h3, p
+      margin-bottom $space
+    img 
+      width 45%
+      height auto
+      padding $space
+      border-radius $space
+  &__info
+    width 55%
+    padding $space
+    color $white
+
+.tips
+  display grid
+  grid-template-columns: 15% 1fr 15%
+  h2  
+    text-align center
+    color $white
+  p
+    color $white
+  &__wrapper
+    display flex
+    flex-direction row
+    grid-column-start: 2
+  .trick
+    display flex
+    flex-direction column
+  .cta
+    background-color $yellow
+    border-radius $space
+    padding $space * 4
+    h3, p
+      color: $black
