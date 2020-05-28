@@ -1,0 +1,177 @@
+/* COLORS
+========================================== */
+/* MIXINS
+========================================== */
+/* RESET
+========================================== */
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* CONTACT
+========================================== */
+.tarjetas{
+  top: 100px;
+  display: flex;
+  justify-content: center;
+  width: 1350px;
+  margin-top: -250px;
+}
+.contact-area {
+  width: 400px;
+  height: 400px;
+  position: relative;
+}
+
+.contact {
+  position: relative;
+  max-width: 720px;
+  padding: 40px 20px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+@media (min-width: 1024px) {
+  .contact {
+    position: absolute;
+    width: 420px;
+    top: 130%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.contact main {
+  float: left;
+  width: 100%;
+  position: relative;
+}
+.contact main section {
+  border-radius: 5px;
+  float: left;
+  width: 100%;
+  background-color: white;
+}
+.contact main section .content {
+  float: left;
+  width: 100%;
+  padding: 20px 30px 50px 30px;
+  position: relative;
+  text-align: center;
+}
+@media (min-width: 414px) {
+  .contact main section .content {
+    text-align: left;
+  }
+}
+.contact main section .content img {
+  display: inline-block;
+  width: 140px;
+  border-radius: 50%;
+}
+@media (min-width: 414px) {
+  .contact main section .content img {
+    float: left;
+    width: 30%;
+    margin-right: 10%;
+  }
+}
+.contact main section .content aside {
+  float: left;
+  width: 100%;
+  color: black;
+  margin-top: 10px;
+}
+@media (min-width: 414px) {
+  .contact main section .content aside {
+    width: 60%;
+  }
+}
+.contact main section .content aside h1 {
+  font-family: 'Gotham Rounded';
+  font-weight: 500;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.contact main section .content aside p {
+  color: black;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  line-height: 160%;
+  font-family: 'Gotham Rounded';
+  font-weight: 500;
+
+}
+.contact main .title {
+  float: left;
+  width: 100%;
+  background-color: black;
+  max-height: 0px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  overflow: hidden;
+  transition: all 0.55s;
+}
+}
+.contact main .title p {
+  padding: 15px 30px;
+  color: black;
+  font-family: 'Gotham Rounded';
+  font-size: 16px;
+  display: inline-block;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s;
+  transform: scale(0);
+}
+.contact main button {
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  background-color: #E4E4E4;
+  color: #000000;
+  border: 0;
+  width: 200px;
+  height: 48px;
+  text-align: center;
+  border-radius: 30px;
+  font-family: 'Gotham Rounded';
+  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: -24px;
+  margin-right: -100px;
+  transition: all 0.4s;
+  transition-delay: 0.1s;
+  outline: none;
+  overflow: hidden;
+  z-index: 10;
+  font-family: inherit;
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+}
+.contact main button span a {
+  color: #000000;
+  text-transform: lowercase;
+  font-family: 'Gotham Rounded';
+  font-weight: 300;
+  transition: opacity 0.2s;
+  transition-delay: 0.4s;
+  display: block;
+  width: 200px;
+  float: left;
+  padding: 15px 0px;
+}
+
+
+@media (min-width: 414px) {
+  .contact nav a {
+    padding: 18px 30px;
+  }
+}
+
+
