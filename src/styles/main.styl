@@ -8,6 +8,9 @@ $regular = 400
 $font = 'Montserrat', sans-serif;
 $space = 16px
 
+$phone = 599px
+$tablet = 1199px
+
 mixin-titles($size)
   font-family $font
   font-weight $bold
@@ -16,12 +19,31 @@ mixin-titles($size)
 
 h1
   mixin-titles(65px)
+  @media (max-width $tablet)
+    font-size: (44px)
+  @media (max-width $phone)
+    font-size: (34px)
 
 h2
   mixin-titles(44px)
+  @media (max-width $tablet)
+    font-size: (34px)
+  @media (max-width $phone)
+    font-size: (24px)
 
 h3
   mixin-titles(34px)
+  @media (max-width $tablet)
+    font-size: (24px)
+  @media (max-width $phone)
+    font-size: (18px)
+
+h4
+  mixin-titles(24px)
+  @media (max-width $tablet)
+    font-size: (18px)
+  @media (max-width $phone)
+    font-size: (18px)
 
 p
   font-family $font
@@ -42,14 +64,15 @@ a
 
 body 
   background-color $black
-  padding-bottom $space * 5
 
 .hero
   display grid
-  grid-template-columns: 25% 1fr 25%
+  grid-template-columns 25% 1fr 25%
   min-height 70%vh
-  padding-bottom: $space * 5
+  padding-bottom $space * 5
   background $yellow
+  @media (max-width $tablet)
+    grid-template-columns 5% 1fr 5%
   &__info
     grid-column-start 2
     display flex
@@ -84,10 +107,12 @@ button
 
 svg 
   position absolute
+  @media (max-width $phone)
+    display none
 
 .cover
   position relative 
-  width: 60%
+  width 60%
   margin-top -($space * 8)
   margin-left 20%
   margin-right 20%
@@ -97,6 +122,10 @@ svg
   display grid
   grid-template-columns 15% 1fr 15%
   padding ($space * 4) 0
+   @media (max-width $tablet)
+    grid-template-columns 1% 1fr 1%
+    padding ($space * 2) 0
+    
   &__wrapper
     display flex
     flex-direction column
@@ -106,6 +135,8 @@ svg
     flex-direction row
     align-items center
     justify-content center
+    @media (max-width $phone)
+      flex-direction column
     h3, p
       margin-bottom $space
     img 
@@ -113,29 +144,67 @@ svg
       height auto
       padding $space
       border-radius $space
+      @media (max-width $phone)
+        width 90%
   &__info
     width 55%
     padding $space
     color $white
+    @media (max-width $phone)
+      width 90%
 
 .tips
-  display grid
-  grid-template-columns: 15% 1fr 15%
   h2  
+    margin-bottom $space*2
     text-align center
     color $white
-  p
-    color $white
   &__wrapper
+    margin 0px 12%
     display flex
     flex-direction row
-    grid-column-start: 2
+    @media(max-width $tablet)
+      margin 0px 5%
+    @media (max-width $phone)
+      flex-direction column
+
   .trick
+    width 25%
     display flex
     flex-direction column
+    padding $space * 2
+    @media (max-width $phone)
+      width 90%
+      padding $space
+    h4, p
+      color $white
   .cta
+    width 60%
+    margin ($space * 4) 20%
     background-color $yellow
     border-radius $space
     padding $space * 4
+    @media (max-width $tablet)
+      width 90%
+      margin ($space * 2) 1%
+      padding $space
     h3, p
-      color: $black
+      color $black
+      margin-bottom $space * 2
+    button
+      text-align left
+
+footer
+  background-color $yellow
+  padding ($space * 4) 20%
+  @media (max-width $tablet)
+    padding ($space * 2) 5%
+    
+  h4, p, a
+    color $black
+    img 
+      width 220px
+  .footer_info, .footer_social
+    width 50%
+    padding $space
+    @media (max-width $phone)
+      width 100%
