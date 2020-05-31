@@ -117,13 +117,15 @@ svg
   margin-left 20%
   margin-right 20%
   border-radius $space
+  @media (max-width $tablet)
+    m
 
 .body
   display grid
   grid-template-columns 15% 1fr 15%
   padding ($space * 4) 0
-   @media (max-width $tablet)
-    grid-template-columns 1% 1fr 1%
+  @media (max-width $tablet)
+    grid-template-columns 16px 1fr 16px
     padding ($space * 2) 0
     
   &__wrapper
@@ -131,6 +133,7 @@ svg
     flex-direction column
     grid-column-start 2
   &__theme
+    margin-top $space * 2
     display flex
     flex-direction row
     align-items center
@@ -154,6 +157,9 @@ svg
       width 90%
 
 .tips
+  padding ($space * 2) 0
+  @media (max-width $phone)
+    padding $space 0
   h2  
     margin-bottom $space*2
     text-align center
@@ -171,40 +177,136 @@ svg
     width 25%
     display flex
     flex-direction column
+    justify-content center
+    align-items center
     padding $space * 2
     @media (max-width $phone)
       width 90%
       padding $space
     h4, p
       color $white
+      text-align center
   .cta
     width 60%
-    margin ($space * 4) 20%
+    margin ($space * 2) auto
     background-color $yellow
     border-radius $space
-    padding $space * 4
+    padding ($space * 2) 0px
     @media (max-width $tablet)
+      margin ($space * 2) 10%
+      padding $space / 2
+    @media (max-width $phone)
       width 90%
-      margin ($space * 2) 1%
-      padding $space
+      margin 0
     h3, p
       color $black
       margin-bottom $space * 2
+      text-align center
+      @media (max-width $phone)
+        margin $space
     button
-      text-align left
+      text-align center
+    &__info
+      display flex
+      flex-direction column
+      justify-content center
+      align-items center
+      width 100%
+
+.icon 
+  margin $space
+  width 40px
+  color $black
+  transition all .5s
+  cursor pointer
+  &:hover
+    transform scale(1.2)
+
+.prices
+  display flex
+  flex-direction column
+  justify-content center
+  align-items center
+  padding ($space * 4) 0
+  h2
+    color $white
+  &__article
+    display flex
+    flex-direction row
+    justify-content space-between
+    @media (max-width $phone)
+      flex-direction column
+  &__item
+    display flex
+    flex-direction column
+    justify-content center
+    align-items center
+    background-color $white
+    margin $space
+    padding $space * 2
+    border-radius $space
+    transition all .5s
+    &:hover
+      transform scale(1.2)
+  h4
+    color $black
+  h5
+    color $black
+    font-family $font
+    font-size $space * 4
+    font-weight $regular
+  li
+    color $black
+
+.quote
+  width 60%
+  margin 0 auto
+  color $yellow
+  padding ($space * 2) ($space)
+  text-align left
+  @media (max-width $phone)
+    width 80%
+    padding 0 16px
+    margin-bottom $space * 2
+  h2 
+    margin-bottom $space
+    font-style italic
+    font-weight $bold
+  h5
+    font-family $font
+    font-size $space * 2
+    font-weight $regular
+    @media (max-width $phone)
+      font-size $space
+
 
 footer
+  display flex
+  flex-direction row
+  flex-wrap nowrap
   background-color $yellow
   padding ($space * 4) 20%
   @media (max-width $tablet)
+    flex-wrap wrap
     padding ($space * 2) 5%
-    
   h4, p, a
     color $black
     img 
       width 220px
-  .footer_info, .footer_social
-    width 50%
+  .footer_info
+    width 70% 
     padding $space
-    @media (max-width $phone)
+    @media (max-width $tablet)
       width 100%
+  .footer_social
+    width 30%
+    padding $space
+    @media (max-width $tablet)
+      width 100%
+    .social__wrapper
+      display flex
+      flex-direction row
+      justify-content space-around
+      padding-top $space * 2
+      @media (max-width $phone)
+        padding-top $space
