@@ -1,1 +1,10 @@
-body{background-color:#a3a4ff;margin:0;padding:0;font-size:16px}div{background-color:#51527f;color:#fff;padding:1em;margin:15px;border-radius:15px;border:1px solid #fff}
+/* body{background-color:#a3a4ff;margin:0;padding:0;font-size:16px}div{background-color:#51527f;color:#fff;padding:1em;margin:15px;border-radius:15px;border:1px solid #fff} */
+.text-videojuegos{
+    color:#2E83A5 !important;
+
+}
+
+#header img{
+    width: 80px;
+
+}
