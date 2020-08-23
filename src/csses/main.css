@@ -1,0 +1,35 @@
+body {
+  background-color: #a3a4ff;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  color: #fff;
+}
+.hero--container {
+  height: 450px;
+  width: 100vw;
+  background: url("https://images.pexels.com/photos/823696/pexels-photo-823696.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") no-repeat center center fixed;
+  background-size: cover;
+  background-clip: unset;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.header__navbar {
+  width: 35%;
+}
+.header .navbar__list {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+div {
+  background-color: #51527f;
+  color: #fff;
+  padding: 1em;
+  margin: 15px;
+  border-radius: 15px;
+  border: 1px solid #fff;
+}
