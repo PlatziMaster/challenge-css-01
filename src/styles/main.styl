@@ -22,21 +22,33 @@ body
   background: url(https://images.pexels.com/photos/823696/pexels-photo-823696.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) no-repeat center center fixed
   background-size: cover 
   background-clip: unset 
- 
- .header 
   display: flex
-  flex-direction: row
-  justify-content: space-between
-  &__navbar 
-    width: 35%
-  .navbar__list
-    display: flex
-    justify-content: space-between
-    list-style: none
+  flex-direction: column
+ 
+.header 
+ display: flex
+ flex-direction: row
+ justify-content: space-between
+ &__navbar 
+   width: 35%
 
-div
+.navbar__list
+   display: flex
+   justify-content: space-between
+   list-style: none
+.title--container 
+  height: 100%
+  display: flex
+  justify-content: center
+  align-items: center
+.main__title
+  justify-content: center
+  align-self: center
+
+
+/* div
   background-color $seconday-color
   color white
   padding 1em
   margin sum(10px, 5)
-  border-radius(15px)
+  border-radius(15px) */
