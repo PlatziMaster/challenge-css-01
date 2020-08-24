@@ -95,10 +95,15 @@ body
 /* Main section */
 .main 
   border-radius(15px)
-
+  &--container
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
 
 .images--container
   display: flex
+  justify-content: center
   .item
     width: 350px
     img 
@@ -106,6 +111,16 @@ body
       height: 100%
       width: 100%
       object-fit: cover
+.button--container
+  display: flex
+  justify-content: center
+  margin-top: 10px
+
+.map--container 
+  display: flex
+  flex-direction: column
+  justify-content: space-around
+  align-items: center
 /* div
   background-color $seconday-color
   color white
