@@ -118,6 +118,24 @@ __:hover {
   justify-content: space-around;
   align-items: center;
 }
+/* Footer section */
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.footer-left,
+.footer-right {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+.footer a {
+  text-decoration: none;
+  color: #808080;
+}
 /* div
   background-color $seconday-color
   color white
