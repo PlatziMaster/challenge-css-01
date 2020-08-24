@@ -6,6 +6,9 @@ border-radius(n)
   border-radius n
   border 1px solid white
 
+background-input(n)
+  background-color: rgba(255,255,255, n) 
+
 sum(a, b)
   a + b
 
@@ -16,6 +19,7 @@ body
   font-size 16px
   color: $color-font
 
+/* Hero section */
 .hero--container 
   height: 550px
   width: 100vw
@@ -24,6 +28,7 @@ body
   background-clip: unset 
   display: flex
   flex-direction: column
+  justify-content: center
  
 .header 
  display: flex
@@ -46,6 +51,48 @@ body
   align-self: center
   font-size: 2.5em
 
+.main-input-container
+  width: 50%
+  border-radius(100px)
+  display: flex
+  justify-content: center
+  align-items: center
+  align-self: center
+  background-input(.8)
+.main-input input 
+    width: 80%
+    height: 40px
+    border: none 
+    outline: none
+    text-align: center
+    background-input(.4)
+&__:hover
+    box-shadow: 0 1px 6px #20212447
+    border-color: #dfe1e500 
+
+.main-input 
+ .search-icon
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Vector_search_icon.svg/945px-Vector_search_icon_svg.png')
+    background-repeat: no-repeat
+    background-position: center
+    background-size: contain
+    width: 18px
+    height: 18px
+    margin-left: 10px
+    padding-left: 10px
+ .micro-icon
+    background-image: url('https://image.flaticon.com/icons/svg/54/54541.svg')
+    background-repeat: no-repeat
+    background-position: center
+    background-size: contain
+    width: 18px
+    height: 18px
+    margin-right: 10px
+    padding-left: 5px
+    cursor: pointer
+
+
+/* Main section */
 .main 
   border-radius(15px)
 
