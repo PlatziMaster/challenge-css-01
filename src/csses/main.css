@@ -22,7 +22,7 @@ body {
   justify-content: space-between;
 }
 .header__navbar {
-  width: 35%;
+  width: 50%;
 }
 .header--text {
   margin-left: 10px;
@@ -57,7 +57,7 @@ body {
   background-color: rgba(255,255,255,0.8);
 }
 .main-input input {
-  width: 80%;
+  width: 500px;
   height: 40px;
   border: none;
   outline: none;
@@ -144,7 +144,7 @@ __:hover {
   align-items: center;
 }
 .facebook-container {
-  width: 18%;
+  width: 200px;
   height: 30px;
   display: flex;
   justify-content: center;
@@ -190,6 +190,7 @@ __:hover {
 .footer a:hover {
   color: #000;
 }
+/* Login section */
 /* div
   background-color $seconday-color
   color white
