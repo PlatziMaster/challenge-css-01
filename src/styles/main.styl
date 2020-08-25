@@ -15,6 +15,14 @@ button-color(n)
 box-shadow(color)
   box-shadow 2px 4px 8px 0px color
 
+height-login(p)
+    min-height: calc(100vh - p)
+
+min-height(n)
+  min-height: n
+
+
+
 
 
 
@@ -195,6 +203,62 @@ body
       color: black
 
 /* Login section */
+
+.register 
+  display: flex
+  align-items: center
+  justify-content: flex-start
+  flex-direction: column
+  height-login(200px)
+  padding: 0 30px
+  &__container,
+  &__container--form
+    display: flex
+    flex-direction: column
+  &__container  
+    color: $color-font
+    min-height(700px)
+    border-radius(50px)
+    justify-content: space-around
+    align-items: center
+    padding: 60px 68px 40px
+
+  & h2
+      display: flex
+      align-self: flex-start
+      background-color: transparent
+  &--input 
+    background-color: transparent
+    border-left: 0
+    border-top: 0
+    border-right: 0 
+    border-bottom: 2px solid white
+    margin-bottom: 16px
+    height: 5px
+    outline: none 
+    padding: 20px
+  &--button
+    border: none 
+    border-radius(25px)
+    color: $color-font
+    font-weight: bold
+    height: 50px
+    margin: 10px 0
+    &:hover
+      cursor: pointer
+      text-decoration: underline
+  
+::placeholder
+  color: $color-font
+
+.login--button
+  color: $color-font
+  text-decoration: none
+  font-weight: bold
+  &:hover 
+    text-decoration: underline
+    cursor: pointer
+
 /* div
   background-color $seconday-color
   color white
