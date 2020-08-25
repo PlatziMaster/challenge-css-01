@@ -4,10 +4,19 @@ $color-font = #ffff;
 
 border-radius(n)
   border-radius n
-  border 1px solid white
+  border 2px solid white
 
 background-input(n)
-  background-color: rgba(255,255,255, n) 
+  background-color rgba(255,255,255, n) 
+
+button-color(n)
+  background-color rgba(255, 192, 75, n)
+
+box-shadow(color)
+  box-shadow 2px 4px 8px 0px color
+
+
+
 
 sum(a, b)
   a + b
@@ -36,11 +45,14 @@ body
  justify-content: space-between
  &__navbar 
    width: 35%
-
+ &--text
+  margin-left:10px
 .navbar__list
    display: flex
-   justify-content: space-between
+   justify-content: space-around
    list-style: none
+   .list--item
+     margin: 0 10px
 .title--container 
   height: 100%
   display: flex
@@ -111,10 +123,27 @@ body
       height: 100%
       width: 100%
       object-fit: cover
+
 .button--container
   display: flex
   justify-content: center
   margin-top: 10px
+
+.button
+  width: 15%
+  height: 40px
+  border-radius(25px)
+  button-color(.9)
+  border: none
+  color: $color-font
+  margin: 15px 0
+  box-shadow( #3e3c3c)
+  &:hover
+    button-color(.75)
+    cursor pointer
+  & a 
+    color: $color-font
+    text-decoration: none
 
 .map--container 
   display: flex
@@ -128,15 +157,19 @@ body
   display: flex
   justify-content: space-between
   padding: 10px
+  margin-top: 20px
   &-left,
   &-right
     width: 50%
     display: flex
     justify-content: space-around
     list-style: none
+    padding: 5px
   & a 
     text-decoration: none
     color: gray
+    &:hover
+      color: black
 /* div
   background-color $seconday-color
   color white

@@ -24,10 +24,16 @@ body {
 .header__navbar {
   width: 35%;
 }
+.header--text {
+  margin-left: 10px;
+}
 .navbar__list {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   list-style: none;
+}
+.navbar__list .list--item {
+  margin: 0 10px;
 }
 .title--container {
   height: 100%;
@@ -43,7 +49,7 @@ body {
 .main-input-container {
   width: 50%;
   border-radius: 100px;
-  border: 1px solid #fff;
+  border: 2px solid #fff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -59,7 +65,7 @@ body {
   background-color: rgba(255,255,255,0.4);
 }
 __:hover {
-  box-shadow: 0 1px 6px rgba(32,33,36,0.278);
+  box-shadow: 2px 4px 8px 0px 0;
   border-color: rgba(223,225,229,0);
 }
 .main-input .search-icon {
@@ -86,7 +92,7 @@ __:hover {
 /* Main section */
 .main {
   border-radius: 15px;
-  border: 1px solid #fff;
+  border: 2px solid #fff;
 }
 .main--container {
   display: flex;
@@ -112,6 +118,25 @@ __:hover {
   justify-content: center;
   margin-top: 10px;
 }
+.button {
+  width: 15%;
+  height: 40px;
+  border-radius: 25px;
+  border: 2px solid #fff;
+  background-color: rgba(255,192,75,0.9);
+  border: none;
+  color: #fff;
+  margin: 15px 0;
+  box-shadow: 2px 4px 8px 0px #3e3c3c;
+}
+.button:hover {
+  background-color: rgba(255,192,75,0.75);
+  cursor: pointer;
+}
+.button a {
+  color: #fff;
+  text-decoration: none;
+}
 .map--container {
   display: flex;
   flex-direction: column;
@@ -124,6 +149,7 @@ __:hover {
   display: flex;
   justify-content: space-between;
   padding: 10px;
+  margin-top: 20px;
 }
 .footer-left,
 .footer-right {
@@ -131,10 +157,14 @@ __:hover {
   display: flex;
   justify-content: space-around;
   list-style: none;
+  padding: 5px;
 }
 .footer a {
   text-decoration: none;
   color: #808080;
+}
+.footer a:hover {
+  color: #000;
 }
 /* div
   background-color $seconday-color
