@@ -163,6 +163,10 @@ __:hover {
   color: #fff;
   cursor: pointer;
 }
+.facebook-container-login {
+  width: 235px;
+  height: 35px;
+}
 .image {
   width: 50px;
   justify-self: flex-end;
@@ -207,11 +211,21 @@ __:hover {
 .register__container {
   color: #fff;
   min-height: 700px;
+  width: 300px;
   border-radius: 50px;
   border: 2px solid #fff;
+  background-color: rgba(175,170,170,0.35);
   justify-content: space-around;
   align-items: center;
   padding: 60px 68px 40px;
+}
+.register__container--remember-me {
+  margin: 15px 0;
+}
+.register__container--remember-me label {
+  padding: 2px;
+  display: flex;
+  justify-content: space-around;
 }
 .register h2 {
   display: flex;
@@ -229,21 +243,30 @@ __:hover {
   outline: none;
   padding: 20px;
 }
+.register--input:hover {
+  border-bottom: 4px solid #fff;
+}
 .register--button {
-  border: none;
   border-radius: 25px;
   border: 2px solid #fff;
+  border: none;
   color: #fff;
   font-weight: bold;
   height: 50px;
-  margin: 10px 0;
+  margin: 12px 0;
+  background-color: rgba(0,0,0,0.8);
+  box-shadow: 2px 4px 8px 0px #3e3c3c;
 }
 .register--button:hover {
   cursor: pointer;
   text-decoration: underline;
+  background-color: rgba(0,0,0,0.5);
 }
 ::placeholder {
   color: #fff;
+}
+::placeholder:hover {
+  font-weight: bold;
 }
 .login--button {
   color: #fff;
@@ -253,6 +276,12 @@ __:hover {
 .login--button:hover {
   text-decoration: underline;
   cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  .register__containe {
+    width: 70%;
+    padding: 0;
+  }
 }
 /* div
   background-color $seconday-color

@@ -9,6 +9,10 @@ border-radius(n)
 background-input(n)
   background-color rgba(255,255,255, n) 
 
+background-register(n) 
+  background-color: rgba(175, 170, 170, n);
+
+
 button-color(n)
   background-color rgba(255, 192, 75, n)
 
@@ -176,6 +180,9 @@ body
     background-input(.25)
     color: $color-font
     cursor: pointer
+  &-login
+    width: 235px
+    height: 35px 
 
 .image
   width: 50px
@@ -218,15 +225,25 @@ body
   &__container  
     color: $color-font
     min-height(700px)
+    width: 300px
     border-radius(50px)
+    background-register(.35)
     justify-content: space-around
     align-items: center
     padding: 60px 68px 40px
+    &--remember-me 
+      margin: 15px 0 
+      label 
+        padding: 2px
+        display: flex
+        justify-content: space-around
+          
 
   & h2
       display: flex
       align-self: flex-start
       background-color: transparent
+ 
   &--input 
     background-color: transparent
     border-left: 0
@@ -237,19 +254,27 @@ body
     height: 5px
     outline: none 
     padding: 20px
+    &:hover
+      border-bottom: 4px solid white
   &--button
-    border: none 
     border-radius(25px)
+    border: none
     color: $color-font
     font-weight: bold
     height: 50px
-    margin: 10px 0
+    margin: 12px 0
+    background-color: rgba(0, 0, 0, .8)
+    box-shadow( #3e3c3c)
+
     &:hover
       cursor: pointer
       text-decoration: underline
+      background-color: rgba(0, 0, 0, .5)
   
 ::placeholder
   color: $color-font
+  &:hover
+    font-weight: bold
 
 .login--button
   color: $color-font
@@ -259,6 +284,10 @@ body
     text-decoration: underline
     cursor: pointer
 
+@media screen and (max-width: 768px)
+  .register__containe
+    width: 70%
+    padding: 0
 /* div
   background-color $seconday-color
   color white
