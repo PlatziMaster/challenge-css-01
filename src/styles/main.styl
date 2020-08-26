@@ -1,6 +1,9 @@
 $primary-color = #A3A4FF;
 $seconday-color = #51527F;
 $color-font = #ffff;
+$color-secundary = #7d7c7c;
+$Font-text = 'Robot', sans-serif;
+$Font-title = 'Open Sans Condensed', sans-serif;
 
 border-radius(n)
   border-radius n
@@ -34,10 +37,11 @@ sum(a, b)
   a + b
 
 body
-  background-color $primary-color
-  margin 0
-  padding 0
-  font-size 16px
+  background-color: $primary-color
+  margin: 0
+  padding: 0
+  font-family: $Font-text
+  font-size: 16px
   color: $color-font
 
 /* Hero section */
@@ -73,7 +77,11 @@ body
 .main__title
   justify-content: center
   align-self: center
-  font-size: 2.5em
+  font-family: $Font-title
+  font-size: 3.5em
+  letter-spacing: .7em
+  font-weight: bold
+  text-transform: uppercase
 
 .main-input-container
   width: 50%
@@ -83,6 +91,7 @@ body
   align-items: center
   align-self: center
   background-input(.8)
+  margin-bottom: 28px 
 .main-input input 
     width: 500px
     height: 40px
@@ -94,7 +103,9 @@ body
     box-shadow: 0 1px 6px #20212447
     border-color: #dfe1e500 
 
-.main-input 
+.main-input .search--input::placeholder
+  color: $color-secundary
+
  .search-icon
     background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Vector_search_icon.svg/945px-Vector_search_icon_svg.png')
     background-repeat: no-repeat
@@ -205,7 +216,7 @@ body
     padding: 5px
   & a 
     text-decoration: none
-    color: gray
+    color: $color-secundary
     &:hover
       color: black
 
