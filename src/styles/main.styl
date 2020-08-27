@@ -29,6 +29,21 @@ min-height(n)
   min-height: n
 
 
+/* Animation */
+.animated 
+  animation-duration: 2.5s
+  animation-fill-mode: both
+  animation-iteration-count: infinite
+
+@keyframes pulse 
+  0% {transform: scale(1);}
+  50% {transform: scale(1.1);}
+  100% {transform: scale(1);}
+
+
+.pulse 
+  animation-name: pulse;
+  animation-duration: 2.5s;
 
 
 
@@ -62,12 +77,14 @@ body
  &__navbar 
    width: 50%
  &--text
+  font-size: 1.4rem
   margin-left:10px
 .navbar__list
    display: flex
    justify-content: space-around
    list-style: none
    .list--item
+     font-size: 1.4rem
      margin: 0 10px
 .title--container 
   height: 100%
@@ -105,6 +122,7 @@ body
 
 .main-input .search--input::placeholder
   color: $color-secundary
+  font-size: 1.15rem
 
  .search-icon
     background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Vector_search_icon.svg/945px-Vector_search_icon_svg.png')
@@ -129,13 +147,16 @@ body
 
 /* Main section */
 .main 
+  font-size: 1.25rem
   border-radius(15px)
+  padding: 45px
   &--container
     display: flex
     flex-direction: column
     justify-content: center
     align-items: center
-
+p
+  text-align: justify
 .images--container
   display: flex
   justify-content: center
@@ -159,6 +180,7 @@ body
   button-color(.9)
   border: none
   color: $color-font
+  font-size: 1.1rem
   margin: 15px 0
   box-shadow( #3e3c3c)
   &:hover
@@ -175,7 +197,7 @@ body
   align-items: center
 
 .facebook-container
-  width: 200px
+  width: 210px
   height: 30px
   display: flex
   justify-content: center
@@ -184,6 +206,7 @@ body
   color: black
   padding: 5px
   margin: 15px
+  font-size: 1rem
   border-radius(25px) 
   background-input(.5)
   box-shadow( #3e3c3c)
