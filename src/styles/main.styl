@@ -1,22 +1,340 @@
 $primary-color = #A3A4FF;
 $seconday-color = #51527F;
+$color-font = #ffff;
+$color-secundary = #7d7c7c;
+$Font-text = 'Robot', sans-serif;
+$Font-title = 'Open Sans Condensed', sans-serif;
 
 border-radius(n)
   border-radius n
-  border 1px solid white
+  border 2px solid white
+
+background-input(n)
+  background-color rgba(255,255,255, n) 
+
+background-register(n) 
+  background-color: rgba(175, 170, 170, n);
+
+
+button-color(n)
+  background-color rgba(81, 82, 127, n)
+
+box-shadow(color)
+  box-shadow 2px 4px 8px 0px color
+
+height-login(p)
+    min-height: calc(100vh - p)
+
+min-height(n)
+  min-height: n
+
+
+/* Animation */
+.animated 
+  animation-duration: 2.5s
+  animation-fill-mode: both
+  animation-iteration-count: infinite
+
+@keyframes pulse 
+  0% {transform: scale(1);}
+  50% {transform: scale(1.1);}
+  100% {transform: scale(1);}
+
+
+.pulse 
+  animation-name: pulse;
+  animation-duration: 2.5s;
+
+
+
 
 sum(a, b)
   a + b
 
 body
-  background-color $primary-color
-  margin 0
-  padding 0
-  font-size 16px
+  background-color: $primary-color
+  margin: 0
+  padding: 0
+  font-family: $Font-text
+  font-size: 16px
+  color: $color-font
 
-div
+/* Hero section */
+.hero--container 
+  height: 550px
+  width: 100vw
+  background: url(https://images.pexels.com/photos/823696/pexels-photo-823696.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) no-repeat center center fixed
+  background-size: cover 
+  display: flex
+  flex-direction: column
+  justify-content: center
+ 
+.header 
+ display: flex
+ flex-direction: row
+ justify-content: space-between
+ &__navbar 
+   width: 50%
+ &--text
+  font-size: 1.4rem
+  font-weight: bold
+  margin-left:10px
+  text-transform: uppercase
+  letter-spacing: 0.15rem
+.navbar__list
+   display: flex
+   justify-content: space-around
+   list-style: none
+   .list--item
+     font-size: 1.4rem
+     margin: 0 10px
+.title--container 
+  height: 100%
+  display: flex
+  justify-content: center
+  align-items: center
+.main__title
+  justify-content: center
+  align-self: center
+  font-family: $Font-title
+  font-size: 3.5em
+  letter-spacing: .7em
+  font-weight: bold
+  text-transform: uppercase
+
+.main-input-container
+  width: 50%
+  border-radius(100px)
+  display: flex
+  justify-content: center
+  align-items: center
+  align-self: center
+  background-input(.8)
+  margin-bottom: 28px 
+.main-input input 
+    width: 500px
+    height: 40px
+    border: none 
+    outline: none
+    text-align: center
+    background-input(.4)
+&__:hover
+    box-shadow: 0 1px 6px #20212447
+    border-color: #dfe1e500 
+
+.main-input .search--input::placeholder
+  color: $color-secundary
+  font-size: 1.15rem
+
+ .search-icon
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Vector_search_icon.svg/945px-Vector_search_icon_svg.png')
+    background-repeat: no-repeat
+    background-position: center
+    background-size: contain
+    width: 18px
+    height: 18px
+    margin-left: 10px
+    padding-left: 10px
+ .micro-icon
+    background-image: url('https://image.flaticon.com/icons/svg/54/54541.svg')
+    background-repeat: no-repeat
+    background-position: center
+    background-size: contain
+    width: 18px
+    height: 18px
+    margin-right: 10px
+    padding-left: 5px
+    cursor: pointer
+
+
+/* Main section */
+.main 
+  font-size: 1.25rem
+  border-radius(15px)
+  padding: 45px
+  &--container
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+p
+  text-align: justify
+.images--container
+  display: flex
+  justify-content: center
+  .item
+    width: 350px
+    img 
+      display: block
+      height: 100%
+      width: 100%
+      object-fit: cover
+
+.button--container
+  display: flex
+  justify-content: center
+  margin-top: 10px
+
+.button
+  width: 15%
+  height: 40px
+  border-radius(25px)
+  background-color: $seconday-color
+  border: none
+  color: $color-font
+  font-size: 1.1rem
+  margin: 15px 0
+  box-shadow( #3e3c3c)
+  &:hover
+    button-color(.75)
+    cursor pointer
+  & a 
+    color: $color-font
+    text-decoration: none
+
+.map--container 
+  display: flex
+  flex-direction: column
+  justify-content: space-around
+  align-items: center
+
+.facebook-container
+  width: 210px
+  height: 30px
+  display: flex
+  justify-content: center
+  align-items: center
+  text-align: center
+  color: rgba(0,0,0,.8)
+  padding: 5px
+  margin: 15px
+  font-size: 1rem
+  font-weight: bold
+  border-radius(25px) 
+  background-input(.5)
+  box-shadow( #3e3c3c)
+  &:hover
+    background-input(.25)
+    color: $color-font
+    cursor: pointer
+  &-login
+    width: 235px
+    height: 35px 
+
+.image
+  width: 50px
+  justify-self: flex-end
+
+
+/* Footer section */
+.footer
+  width: 100%
+  display: flex
+  justify-content: space-between
+  padding: 10px
+  margin-top: 20px
+  &-left,
+  &-right
+    width: 50%
+    display: flex
+    justify-content: space-around
+    list-style: none
+    padding: 5px
+  & a 
+    text-decoration: none
+    color: $color-secundary
+    &:hover
+      color: black
+
+/* Login section */
+
+.register 
+  display: flex
+  align-items: center
+  justify-content: flex-start
+  flex-direction: column
+  height-login(200px)
+  padding: 0 30px
+  &__container,
+  &__container--form
+    display: flex
+    flex-direction: column
+  &__container  
+    color: $color-font
+    min-height(700px)
+    width: 300px
+    border-radius(50px)
+    background-register(.35)
+    justify-content: space-around
+    align-items: center
+    padding: 60px 68px 40px
+    &--remember-me 
+      margin: 15px 0 
+      label 
+        padding: 2px
+        display: flex
+        justify-content: space-around
+        & a 
+          text-decoration: none
+          font-size: .8rem
+          color: $color-secundary
+          &:hover
+              color: $color-font
+          
+
+  & h2
+      display: flex
+      align-self: flex-start
+      background-color: transparent
+ 
+  &--input 
+    background-color: transparent
+    border-left: 0
+    border-top: 0
+    border-right: 0 
+    border-bottom: 2px solid white
+    margin-bottom: 16px
+    height: 5px
+    outline: none 
+    padding: 20px
+    &:hover
+      border-bottom: 4px solid white
+  &--button
+    border-radius(25px)
+    border: none
+    color: $color-font
+    font-weight: bold
+    height: 50px
+    margin: 12px 0
+    background-color: $seconday-color
+    box-shadow( #3e3c3c)
+
+    &:hover
+      cursor: pointer
+      text-decoration: underline
+      background-color: rgba(0, 0, 0, .5)
+  
+::placeholder
+  color: $color-font
+  &:hover
+    font-weight: bold
+
+.login--button
+  color: $color-font
+  text-decoration: none
+  font-weight: bold
+  &:hover 
+    text-decoration: underline
+    cursor: pointer
+    color: gray
+
+@media screen and (max-width: 768px)
+  .register__containe
+    width: 70%
+    padding: 0
+/* div
   background-color $seconday-color
   color white
   padding 1em
   margin sum(10px, 5)
-  border-radius(15px)
+  border-radius(15px) */
