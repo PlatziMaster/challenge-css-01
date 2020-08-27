@@ -17,7 +17,7 @@ background-register(n)
 
 
 button-color(n)
-  background-color rgba(255, 192, 75, n)
+  background-color rgba(81, 82, 127, n)
 
 box-shadow(color)
   box-shadow 2px 4px 8px 0px color
@@ -65,7 +65,6 @@ body
   width: 100vw
   background: url(https://images.pexels.com/photos/823696/pexels-photo-823696.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) no-repeat center center fixed
   background-size: cover 
-  background-clip: unset 
   display: flex
   flex-direction: column
   justify-content: center
@@ -78,7 +77,10 @@ body
    width: 50%
  &--text
   font-size: 1.4rem
+  font-weight: bold
   margin-left:10px
+  text-transform: uppercase
+  letter-spacing: 0.15rem
 .navbar__list
    display: flex
    justify-content: space-around
@@ -177,7 +179,7 @@ p
   width: 15%
   height: 40px
   border-radius(25px)
-  button-color(.9)
+  background-color: $seconday-color
   border: none
   color: $color-font
   font-size: 1.1rem
@@ -203,10 +205,11 @@ p
   justify-content: center
   align-items: center
   text-align: center
-  color: black
+  color: rgba(0,0,0,.8)
   padding: 5px
   margin: 15px
   font-size: 1rem
+  font-weight: bold
   border-radius(25px) 
   background-input(.5)
   box-shadow( #3e3c3c)
@@ -271,6 +274,12 @@ p
         padding: 2px
         display: flex
         justify-content: space-around
+        & a 
+          text-decoration: none
+          font-size: .8rem
+          color: $color-secundary
+          &:hover
+              color: $color-font
           
 
   & h2
@@ -297,7 +306,7 @@ p
     font-weight: bold
     height: 50px
     margin: 12px 0
-    background-color: rgba(0, 0, 0, .8)
+    background-color: $seconday-color
     box-shadow( #3e3c3c)
 
     &:hover
@@ -317,6 +326,7 @@ p
   &:hover 
     text-decoration: underline
     cursor: pointer
+    color: gray
 
 @media screen and (max-width: 768px)
   .register__containe
